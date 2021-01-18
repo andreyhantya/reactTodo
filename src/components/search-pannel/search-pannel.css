@@ -1,11 +1,16 @@
 .search-input {
     width: auto;
+    display: flex;
     justify-content: space-between;
     flex-grow: 1;
     margin-right: 3px;
     margin-bottom: 10px;
+    height: 100%;
 }
 
-.search-input input {
-    width: 100%;
+.search-input input{
+    padding-left: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
 }
