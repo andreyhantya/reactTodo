@@ -1,5 +1,11 @@
 .search-input {
     width: auto;
+    justify-content: space-between;
     flex-grow: 1;
     margin-right: 3px;
+    margin-bottom: 10px;
+}
+
+.search-input input {
+    width: 100%;
 }

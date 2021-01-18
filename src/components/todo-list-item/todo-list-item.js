@@ -11,13 +11,14 @@ const TodoListItem = ({ label, important }) => {
                   style={style}>
                 { label }
             </span>
-            <button type='button' className='btn btn-outline-success btn-sm'>
-                <i className='fa fa-exclamation' />
-            </button>
-            <button type='button' className='btn btn-outline-danger btn-sm'>
-                <i className='fa fa-trash-o' />
-            </button>
-
+            <div className='button-wrap'>
+                <button type='button' className='btn btn-outline-success btn-sm'>
+                    <i className='fa fa-exclamation' />
+                </button>
+                <button type='button' className='btn btn-outline-danger btn-sm'>
+                    <i className='fa fa-trash-o' />
+                </button>
+            </div>
 
         </span>
         );
