@@ -26,30 +26,38 @@ export default class TodoListItem extends Component {
     }
 
     render() {
-        const {label} = this.props;
+        const {label, onDeleted,
+               onToggleDone, onToggleImportant} = this.props;
         const {done, important} = this.state;
 
-        let classNames = 'todo-list-item'
+        let classNames = 'todo-list-item';
 
-        done ? classNames += 'done' : null;
-        important ?  classNames += ' important' : null;
+        if(done){
+            classNames += ' done';
+        }
+        if (important) {
+            classNames += ' important';
+        }
 
         return (
             <span className={classNames}>
                 <span className='todo-list-item-label'
-                      onClick={this.onLabelChange}
+                      onClick={onToggleDone}
                 >
                       {label}
                 </span>
               <div className='button-wrap'>
-                    <button type='button' className='btn btn-outline-danger btn-sm'>
+                    <button type='button'
+                            className='btn btn-outline-danger btn-sm'
+                            onClick={onDeleted}>
                         <i className='fa fa-trash-o'/>
                     </button>
                     <button type='button'
                             className='btn btn-outline-success btn-sm'
-                            onClick={this.onMarkImportant}>
+                            onClick={onToggleImportant}>
                         <i className='fa fa-exclamation'/>
                     </button>
+
                 </div>
             </span>
         );
